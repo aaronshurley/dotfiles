@@ -22,6 +22,7 @@ alias gap="git add -p"
 alias gd="git diff"
 alias gp="git push"
 alias gpom="git push origin master"
+alias gpsom="git push --set-upstream origin master"
 alias gpr="git pull -r"
 alias gst="git status"
 
