@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -e
+
 cd "$(dirname "${BASH_SOURCE}")"
 
 git pull origin master
