@@ -18,8 +18,12 @@ alias w="cd ~/workspace"
 alias g="git"
 
 # git
-alias gst="git status"
+alias gap="git add -p"
 alias gd="git diff"
+alias gp="git push"
+alias gpom="git push origin master"
+alias gpr="git pull -r"
+alias gst="git status"
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`

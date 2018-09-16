@@ -32,6 +32,18 @@ function setup_vim() {
   vim-update
 }
 
+function setup_fasd() {
+  local fasd_cache
+  fasd_cache="$HOME/.fasd-init-bash"
+
+  if [[ "$(command -v fasd)" -nt "$fasd_cache" ]] || [[ ! -s "${fasd_cache}" ]]; then
+    fasd --init posix-alias bash-hook bash-ccomp bash-ccomp-install >| "$fasd_cache"
+  fi
+
+  source "${fasd_cache}"
+  eval "$(fasd --init auto)"
+}
+
 function rsync_and_source() {
   rsync --exclude ".git/" \
     --exclude ".DS_Store" \
@@ -44,6 +56,7 @@ function rsync_and_source() {
 function do_it() {
   brew_all_the_things
   setup_vim
+  setup_fasd
   rsync_and_source
 }
 
