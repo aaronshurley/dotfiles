@@ -4,6 +4,9 @@
 alias vim="nvim"
 alias vi="nvim"
 
+# lolcat over cat
+alias cat="lolcat"
+
 # Easier navigation: .., ..., ...., ....., ~ and -
 alias ..="cd .."
 alias ...="cd ../.."
