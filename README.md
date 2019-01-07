@@ -3,7 +3,7 @@ Setup for a new Mac. Largely inspired by [mathiasbyens](https://github.com/mathi
 
 ## Install
 ```bash
-./bootstrap.sh
+./install.sh
 ```
 
 ## Update MacOS Preferences
@@ -17,5 +17,6 @@ Using [Homebrew](https://brew.sh/), edit `Brewfile` and then `./bootstrap.sh`.
 
 ## Patterns
 - idempotent install
-- Use brew to install as much as possible
-- nvim with [luan's vimfiles](https://github.com/luan/vimfiles)
+- non-destructive, when possible
+- Use brew to install, when possible
+- [nvim](https://neovim.io/) with [luan's vimfiles](https://github.com/luan/vimfiles)

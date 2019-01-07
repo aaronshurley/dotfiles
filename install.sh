@@ -36,7 +36,7 @@ function setup_vim() {
 
 function setup_fasd() {
   local fasd_cache
-  fasd_cache="$HOME/.fasd-init-bash"
+  fasd_cache="${HOME}/.fasd-init-bash"
 
   if [[ "$(command -v fasd)" -nt "$fasd_cache" ]] || [[ ! -s "${fasd_cache}" ]]; then
     fasd --init posix-alias bash-hook bash-ccomp bash-ccomp-install >| "$fasd_cache"
@@ -52,6 +52,7 @@ function rsync_and_source() {
     --exclude ".macos" \
     --exclude "bootstrap.sh" \
     -avh --no-perms . ~
+
   source ~/.bash_profile
 }
 
