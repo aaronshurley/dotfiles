@@ -51,8 +51,10 @@ function rsync_and_source() {
     --exclude ".DS_Store" \
     --exclude ".macos" \
     --exclude "bootstrap.sh" \
+    --exclude "Brewfile" \
+    --exclude "LICENSE" \
+    --exclude "README.md" \
     -avh --no-perms . ~
-
   source ~/.bash_profile
 }
 
